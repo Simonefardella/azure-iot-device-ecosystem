@@ -1,12 +1,12 @@
 ---
-platform: {enter the OS name running on edge device}
-device: {enter your device name here}
-language: {enter the language used to you edge device}
+platform: Raspbian
+device: Trueverit V Edge Gateway 
+language: Python
 ---
 
 *We highly recommend keeping this document current, and Microsoft reserves a right to remove devices and documents from the Azure IoT Device Catalog if document contains broken URL links, incorrect information etc.*
 
-Run a simple {enter the language used to you edge device} sample on {enter your device name here} device running {enter the OS name running on edge device. Specify distribution or Windows SKU information. Ex: Ubuntu Sever 16.04, Windows 10 IoT Core. Only [Tier 1 OS](https://docs.microsoft.com/en-us/azure/iot-edge/support) is allowed}
+Run a simple Python sample on Trueverit V Edge Gateway device running Raspbian 10 Buster
 ===
 ---
 
@@ -31,7 +31,7 @@ Run a simple {enter the language used to you edge device} sample on {enter your 
 
 **About this document**
 
-This document describes how to connect {enter your device name here} device running {enter the OS name running on edge device} with Azure IoT Edge Runtime pre-installed and Device Management. This multi-step process includes:
+This document describes how to connect Trueverit V Edge Gateway device running Raspbian 10 Buster with Azure IoT Edge Runtime pre-installed and Device Management. This multi-step process includes:
 
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
@@ -48,13 +48,19 @@ You should have the following items ready before beginning the process:
 -   [Sign up to IOT Hub](https://account.windowsazure.com/signup?offer=ms-azr-0044p)
 -   [Add the Edge Device](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart-linux)
 -   [Add the Edge Modules](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart-linux#deploy-a-module)
--   {enter your device name here} device.
--   {{Please specify if any other software(s) or hardware(s) are required.}}
+-   Trueverit V Edge Gateway device.
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
 
--   {{Write down the instructions required to setup, configure and connect your device. Please use external links when possible pointing to your own page with device preparation steps.}}
+-   As an Enterprise grade Plug&Play device, you can flash the specified base Operating System (Raspbian 10 Buster) version into a microSD using the win32flashtools or Balena Etcher
+-   Put the sd into the housing screwing down the screw placed in the lower right part of the gateway
+-   Connect a power source to the Edge Gateway, like: 110-230VAC, 12VDC or PoE Lan Cable
+-   A led green will show you the correct power presence, at this point, the Trueverit V Edge Gateway will start it's booting process
+-   To get the ip address of the device, you have three options:
+--  Ping the address: ping trueverit-edge.local and get the respective IP address
+--  Do a network scan and identify the corresponding Trueverit-Edge device
+--  Access the console device using a USB-COM RJ-45 cable and login with the default credentials 
 
 <a name="Manual"></a>
 # Step 3: Manual Test for Azure IoT Edge on device
@@ -81,17 +87,17 @@ Open the command prompt on your IoT Edge device , confirm that the Azure IoT edg
 
     systemctl status iotedge
 
- ![](./images/Capture.png)
+ ![](./images/Screenshot 2020-01-28 at 15.54.35.png)
 
 Open the command prompt on your IoT Edge device, confirm that the module deployed from the cloud is running on your IoT Edge device
 
     sudo iotedge list
 
- ![](./images/iotedgedaemon.png) 
+ ![](./images/Screenshot 2020-01-28 at 15.55.55.png) 
 
 On the device details page of the Azure, you should see the runtime modules - edgeAgent, edgeHub and tempSensor modueles are under running status
 
- ![](./images/tempSensor.png)
+ ![](./images/Screenshot 2020-01-28 at 16.21.38.png)
 
 <a name="Step-3-2-DeviceManagement"></a>
 ## 3.2 Device Management (Optional)
