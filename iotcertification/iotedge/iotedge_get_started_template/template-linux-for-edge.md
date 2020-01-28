@@ -87,13 +87,13 @@ Open the command prompt on your IoT Edge device , confirm that the Azure IoT edg
 
     systemctl status iotedge
 
- ![](./images/Screenshot 2020-01-28 at 15.54.35.png)
+ ![](./images/Screenshot%202020-01-28%20at%2015.54.35.png)
 
 Open the command prompt on your IoT Edge device, confirm that the module deployed from the cloud is running on your IoT Edge device
 
     sudo iotedge list
 
- ![](./images/Screenshot 2020-01-28 at 15.55.55.png) 
+ ![](./images/Screenshot%202020-01-28%20at%2015.55.55.png) 
 
 On the device details page of the Azure, you should see the runtime modules - edgeAgent, edgeHub and tempSensor modueles are under running status
 
