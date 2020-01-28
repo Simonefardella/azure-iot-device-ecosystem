@@ -97,7 +97,7 @@ Open the command prompt on your IoT Edge device, confirm that the module deploye
 
 On the device details page of the Azure, you should see the runtime modules - edgeAgent, edgeHub and tempSensor modueles are under running status
 
- ![](./images/Screenshot 2020-01-28 at 16.21.38.png)
+ ![](./images/Screenshot%202020-01-28%20at%2016.21.38.png)
 
 <a name="Step-3-2-DeviceManagement"></a>
 ## 3.2 Device Management (Optional)
