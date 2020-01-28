@@ -99,76 +99,14 @@ On the device details page of the Azure, you should see the runtime modules - ed
 
  ![](./images/Screenshot%202020-01-28%20at%2016.21.38.png)
 
-<a name="Step-3-2-DeviceManagement"></a>
-## 3.2 Device Management (Optional)
-
-**Pre-requisites:** Device Connectivity.
-
-**Description:** A device that can perform basic device management operations (Reboot and Firmware update) triggered by messages from IoT Hub.
-
-## 3.2.1 Firmware Update (Using Microsoft SDK Samples):
-
-Specify the path {{enter the path}} where the firmwareupdate client components are installed.
-
-To run the simulated device application, open a shell or command prompt window and navigate to the **iot-hub/Tutorials/FirmwareUpdate** folder in the Node.js project you downloaded. Then run the following commands:
-
-    npm install
-    node SimulatedDevice.js "{your device connection string}"
-
-To run the back-end application, open another shell or command prompt window. Then navigate to the **iot-hub/Tutorials/FirmwareUpdate** folder in the Node.js project you downloaded. Then run the following commands:
-
-    npm install
-    node ServiceClient.js "{your service connection string}"
-
-IoT device client will get the message and report the status to the device twin.
-
- ![](./images/devicetwin.png)
-
-**Update firmware**
-
-Confirm the IoT hub, Device ID, method name and method payload as below:
-
--   Press “call Method” button
--   Check the returning status as below:
-
- ![](./images/firmware.png)
-
-
-## 3.2.2 Reboot (Using Microsoft SDK Samples):
-
-Specify the path {{enter the path}} where the components are installed 
-
-Confirm the IoT hub, Device ID, method name as below:
-
--   Press “call Method” button
--   Check the returning status as below:
-
- ![](./images/reboot.png)
-
-
-IoT device client will get the message and report the status to the device twin.
-
- ![](./images/devicetwinmessage.png)
-  
-## 3.3.3 Firmware Update (Modified SDK samples/Custom made application):
-
-If the Client components are custom made please add the steps to execute the Firmware Update through Device Twin.
-
-**Note**: Client Components must be shipped with the device 
-
-## 3.3.4 Reboot (Modified SDK samples/Custom made application):
-
-If the Client components are custom made please add the steps to execute the Device Reboot through Direct Methods
-
-**Note**: Client Components must be shipped with the device 
 
 <a name="NextSteps"></a>
-# Step 4: Next steps
+# Step 3: Next steps
 
 Once you shared the documents with us, we will contact you in the following 48 to 72 business hours with next steps.
 
 <a name="Step-5-Troubleshooting"></a>
-# Step 5: Troubleshooting
+# Step 4: Troubleshooting
 
 Please contact engineering support on **<mailto:iotcert@microsoft.com>** for help with troubleshooting.
   
